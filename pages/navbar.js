@@ -16,7 +16,7 @@ const Navbar = () => {
       <Link href="/resume">Resume</Link>
       <Link href="/blog">Blog</Link>
       <Link href="/contact">Contact Me</Link>
-      <Link href="/" className="icon" onClick={icon}>
+      <Link href="" className="icon" onClick={icon}>
         <i className="fa fa-bars"></i>
       </Link>
     </nav>
