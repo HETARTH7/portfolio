@@ -2,10 +2,15 @@ import Head from "next/head";
 import { Inter } from "@next/font/google";
 import Footer from "./footer";
 import Navbar from "./navbar";
+import Home from "./home";
+import Projects from "./projects";
+import Resume from "./resume";
+import Blog from "./blog";
+import Contact from "./contact";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export default function Root() {
   return (
     <>
       <Head>
@@ -16,7 +21,11 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       </Head>
       <Navbar />
-      Home
+      <Home />
+      <Projects />
+      <Resume />
+      <Blog />
+      <Contact />
       <Footer />
     </>
   );
