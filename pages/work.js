@@ -1,7 +1,7 @@
-const Blog = () => {
+const Work = () => {
   return (
-    <div id="blog">
-      <h1>Blog</h1>
+    <div id="work">
+      <h1>Work</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Habitant morbi
@@ -59,4 +59,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default Work;

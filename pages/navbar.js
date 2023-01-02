@@ -9,15 +9,14 @@ const Navbar = () => {
       x.className = "topnav";
     }
   };
+
   return (
     <nav className="topnav" id="myTopnav">
       <Link href="" className="icon" onClick={icon}>
         <i className="fa fa-bars"></i>
       </Link>
-      <Link href="#contact">Contact Me</Link>
-      <Link href="#blog">Blog</Link>
-      <Link href="#resume">Resume</Link>
-      <Link href="#projects">Projects</Link>
+      <Link href="/about">About</Link>
+      <Link href="/#work">Work</Link>
       <Link href="/">Home</Link>
     </nav>
   );

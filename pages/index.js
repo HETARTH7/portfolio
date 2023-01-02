@@ -3,12 +3,7 @@ import { Inter } from "@next/font/google";
 import Footer from "./footer";
 import Navbar from "./navbar";
 import Home from "./home";
-import Projects from "./projects";
-import Resume from "./resume";
-import Blog from "./blog";
-import Contact from "./contact";
-
-const inter = Inter({ subsets: ["latin"] });
+import Work from "./work";
 
 export default function Root() {
   return (
@@ -22,10 +17,7 @@ export default function Root() {
       </Head>
       <Navbar />
       <Home />
-      <Projects />
-      <Resume />
-      <Blog />
-      <Contact />
+      <Work />
       <Footer />
     </>
   );
