@@ -24,19 +24,43 @@ const About = () => {
             <h1 className="head">Skills</h1>
             <ul>
               <li>Front End Development</li>
-              <li>Javascript</li>
-              <li>ReactJS</li>
-              <li>NextJS</li>
+              <li>
+                <i class="fa-brands fa-js"></i>Javascript
+              </li>
+              <li>
+                <i class="fa-brands fa-react"></i> ReactJS
+              </li>
+              <li>
+                <i class="fa-brands fa-n"></i>NextJS
+              </li>
               <li>Back End Development</li>
-              <li>Python</li>
-              <li>PHP</li>
-              <li>SQL, NOSQL</li>
-              <li>NodeJS</li>
-              <li>ExpressJS</li>
-              <li>MongoDB</li>
-              <li>MySQL</li>
-              <li>C/C++</li>
-              <li>Java</li>
+              <li>
+                <i class="fa-brands fa-python"></i>Python
+              </li>
+              <li>
+                <i class="fa-brands fa-php"></i>PHP
+              </li>
+              <li>
+                <i class="fa-solid fa-database"></i>SQL, NOSQL
+              </li>
+              <li>
+                <i class="fa-brands fa-node"></i>NodeJS
+              </li>
+              <li>
+                <i class="fa-brands fa-js"></i>ExpressJS
+              </li>
+              <li>
+                <i class="fa-solid fa-database"></i>MongoDB
+              </li>
+              <li>
+                <i class="fa-solid fa-database"></i>MySQL
+              </li>
+              <li>
+                <i class="fa-solid fa-c"></i>C/C++
+              </li>
+              <li>
+                <i class="fa-brands fa-java"></i>Java
+              </li>
             </ul>
           </div>
         </div>

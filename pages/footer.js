@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div id="contact footer">
+    <div id="footer">
       <h1>Contact</h1>
       <Link
         target="_blank"

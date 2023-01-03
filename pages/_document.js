@@ -7,7 +7,7 @@ export default function Document() {
         <link
           href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap"
           rel="stylesheet"
-        />
+        ></link>
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
