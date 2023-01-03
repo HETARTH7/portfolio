@@ -2,6 +2,10 @@ body {
   font-family: "Raleway", sans-serif;
 }
 
+li {
+  list-style: none;
+}
+
 .footer {
   position: fixed;
   bottom: 0;
@@ -72,12 +76,14 @@ body {
 #work,
 #about {
   padding-top: 5rem;
+  padding-bottom: 5rem;
   scroll-behavior: smooth;
 }
 
 .link {
   text-decoration: none;
   padding: 1rem;
+  font-weight: bolder;
   color: black;
 }
 
@@ -96,4 +102,36 @@ body {
 .introduction {
   font-size: 3rem;
   margin: 0;
+}
+
+#about .head {
+  font-size: 4rem;
+}
+
+#about .text {
+  font-size: 1.5rem;
+}
+
+.up {
+  display: flex;
+  margin: 2rem;
+}
+
+.aboutme,
+.skills {
+  flex: 1;
+  text-align: center;
+  padding: 2rem;
+}
+
+.down {
+  display: flex;
+  margin: 2rem;
+}
+
+.learning,
+.interests {
+  flex: 1;
+  text-align: center;
+  padding: 2rem;
 }
