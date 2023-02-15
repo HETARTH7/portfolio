@@ -11,7 +11,7 @@ export default function Projects() {
         href="https://github.com/HETARTH7/XrossFit-FrontEnd"
         target="_blank"
       >
-        <button className="bg-neutral-900 text-xl hover:text-2xl rounded-3xl m-8 ml-96 mr-96">
+        <button className="text-xl hover:text-2xl rounded-3xl">
           <h1 className="text-4xl font-black tracking-tighter m-8">XrossFit</h1>
           <p className="text-xl text-gray-400 tracking-tighter mt-8">
             MERN Stack
@@ -28,7 +28,7 @@ export default function Projects() {
         href="https://github.com/HETARTH7/Notes-Keeper-App-Front-End"
         target="_blank"
       >
-        <button className="bg-neutral-900 text-xl hover:text-2xl rounded-3xl m-8 ml-96 mr-96">
+        <button className="text-xl hover:text-2xl rounded-3xl">
           <h1 className="text-4xl font-black tracking-tighter m-8">
             Keeper App
           </h1>
@@ -42,7 +42,7 @@ export default function Projects() {
         </button>
       </Link>
       <Link href="https://github.com/HETARTH7/Task-Manager-App" target="_blank">
-        <button className="bg-neutral-900 text-xl hover:text-2xl rounded-3xl m-8 ml-96 mr-96">
+        <button className="text-xl hover:text-2xl rounded-3xl">
           <h1 className="text-4xl font-black tracking-tighter m-8">
             To Do List
           </h1>
@@ -55,7 +55,7 @@ export default function Projects() {
         </button>
       </Link>
       <Link href="https://github.com/HETARTH7/Password-Checker" target="_blank">
-        <button className="bg-neutral-900 text-xl hover:text-2xl rounded-3xl m-8 ml-96 mr-96">
+        <button className="text-xl hover:text-2xl rounded-3xl">
           <h1 className="text-4xl font-black tracking-tighter m-8">
             Password Checker
           </h1>
