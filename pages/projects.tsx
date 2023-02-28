@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Projects() {
   return (
     <div id="projects" className="h-auto text-center font-mono mb-32">
-      <h1 className="text-8xl font-black tracking-tighter pt-32 pb-24">
+      <h1 className="text-4xl font-black tracking-tighter pt-32 pb-24">
         Projects
       </h1>
 
