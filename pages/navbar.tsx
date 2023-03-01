@@ -41,18 +41,18 @@ export default function NavBar() {
             >
               <ul className="h-screen md:h-auto items-center justify-center md:flex ">
                 <li className="pb-6 text-xl text-white font-mono py-2 px-6 text-center  border-b-2 md:border-b-0  hover:text-2xl  border-white  md:hover:md:hover:bg-transparent">
-                  <Link href="#work" onClick={() => setNavbar(!navbar)}>
+                  <Link href="#work" onClick={() => setNavbar(!navbar)} scroll={false}>
                     Work
                   </Link>
                 </li>
 
                 <li className="pb-6 text-xl text-white font-mono py-2 px-6 text-center  border-b-2 md:border-b-0  hover:text-2xl  border-white  md:hover:md:hover:bg-transparent">
-                  <Link href="#projects" onClick={() => setNavbar(!navbar)}>
+                  <Link href="#projects" onClick={() => setNavbar(!navbar)} scroll={false}>
                     Projects
                   </Link>
                 </li>
                 <li className="pb-6 text-xl text-white font-mono py-2 px-6 text-center  border-b-2 md:border-b-0  hover:text-2xl  border-white  md:hover:md:hover:bg-transparent">
-                  <Link href="#connect" onClick={() => setNavbar(!navbar)}>
+                  <Link href="#connect" onClick={() => setNavbar(!navbar)} scroll={false}>
                     Connect
                   </Link>
                 </li>

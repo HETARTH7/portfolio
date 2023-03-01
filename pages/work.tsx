@@ -5,7 +5,10 @@ export default function Work() {
         The Sparks Foundation
       </h1>
       <p className="text-xl text-gray-400 tracking-tighter mt-8">
-        Web Development Intern<span className="ml-8">December 2022</span>
+        Web Development Intern
+      </p>
+      <p className="text-xl text-gray-400 tracking-tighter mt-8">
+        December 2022
       </p>
     </div>
   );
