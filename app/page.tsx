@@ -1,6 +1,9 @@
 "use client";
-import Navbar from "./Navbar";
+import Navbar from "./navbar";
+import Projects from "./projects";
 import About from "./about";
+import Footer from "./footer";
+import Contact from "./contact";
 
 export default function Home() {
   return (
@@ -12,6 +15,9 @@ export default function Home() {
         <h1 className="text-4xl">A Full Stack Developer</h1>
       </div>
       <About />
+      <Projects />
+      <Contact />
+      <Footer />
     </div>
   );
 }

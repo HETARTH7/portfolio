@@ -15,9 +15,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      {/* <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </head> */}
+      <head>
+        <link rel="shortcut icon" href="https://fontawesome.com/icons/code?f=classic&s=solid" type="image/x-icon" />
+      </head>
       <body suppressHydrationWarning={true} className={inter.className}>
         {children}
       </body>

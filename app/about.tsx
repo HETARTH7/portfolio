@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <div className="h-screen text-center" id="about">
+    <div className="h-screen text-center mt-20 mb-10" id="about">
       <h1 className="text-6xl max-[600px]:text-4xl">About Me</h1>
       <p className="text-2xl w-1/2 ml-96 mt-7 max-[600px]:ml-24">
         Aspiring Software Engineer with ability to learn and collaborate in
@@ -13,9 +13,6 @@ const About = () => {
       <p className="text-2xl w-1/2 ml-96 mt-7 max-[600px]:ml-24">
         A Full Stack Developer with a passion for building robust and
         user-friendly web applications.
-      </p>
-      <p className="text-2xl w-1/2 ml-96 mt-7 max-[600px]:ml-24">
-        I have worked as a Web Development Intern at The Sparks Foundation
       </p>
       <h1 className="text-2xl w-1/2 ml-96 mt-20 max-[600px]:ml-24">
         Languages and Tools I am familiar with
