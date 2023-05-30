@@ -1,12 +1,14 @@
 import { redirect } from "next/dist/server/api-utils";
 import Image from "next/image";
-import React, { ReactEventHandler, useState } from "react";
+import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
+import Script from "next/script";
 const Contact = () => {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (e: { preventDefault: () => void }) => {
+  const handleSubmit = () => {
     setFullName("");
     setEmail("");
     setMessage("");
@@ -16,7 +18,10 @@ const Contact = () => {
       <h1 className="text-6xl max-[600px]:text-4xl">Get in touch</h1>
       <form onSubmit={handleSubmit} className="max-w-md mx-auto mt-10">
         <div className="mb-4">
-          <label className="float-left block mb-2 font-semibold" htmlFor="fullName">
+          <label
+            className="float-left block mb-2 font-semibold"
+            htmlFor="fullName"
+          >
             Full Name
           </label>
           <input
@@ -29,7 +34,10 @@ const Contact = () => {
           />
         </div>
         <div className="mb-4">
-          <label className="float-left block mb-2 font-semibold" htmlFor="email">
+          <label
+            className="float-left block mb-2 font-semibold"
+            htmlFor="email"
+          >
             E-Mail
           </label>
           <input
@@ -42,7 +50,10 @@ const Contact = () => {
           />
         </div>
         <div className="mb-4">
-          <label className="float-left block mb-2 font-semibold" htmlFor="message">
+          <label
+            className="float-left block mb-2 font-semibold"
+            htmlFor="message"
+          >
             Message
           </label>
           <textarea
@@ -58,7 +69,7 @@ const Contact = () => {
           type="submit"
           className="w-full py-2 px-4 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
         >
-          Submit
+          Send
         </button>
       </form>
       <div>

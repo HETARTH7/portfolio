@@ -4,6 +4,7 @@ import Projects from "./projects";
 import About from "./about";
 import Footer from "./footer";
 import Contact from "./contact";
+import Script from "next/script";
 
 export default function Home() {
   return (
