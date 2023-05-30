@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <div className="h-screen text-center mt-20 mb-10" id="about">
+    <div className="text-center mt-20 mb-10" id="about">
       <h1 className="text-6xl max-[600px]:text-4xl">About Me</h1>
       <p className="text-2xl w-1/2 ml-96 mt-7 max-[600px]:ml-24">
         Aspiring Software Engineer with ability to learn and collaborate in
