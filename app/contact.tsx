@@ -3,7 +3,6 @@ import React, { useState, useRef, LegacyRef } from "react";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
-  const form = useRef<HTMLFormElement>("");
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -14,7 +13,7 @@ const Contact = () => {
       .sendForm(
         "service_vl80kdn",
         "template_o22h10m",
-        form.current,
+        "form",
         "TlQ1AGe5pz9tkw7bW"
       )
       .then(
@@ -33,7 +32,7 @@ const Contact = () => {
     <div className="h-screen text-center mt-60" id="contact">
       <h1 className="text-6xl max-[600px]:text-4xl">Get in touch</h1>
       <form
-        ref={form}
+        name="form"
         onSubmit={handleSubmit}
         className="max-w-md mx-auto mt-10"
       >
