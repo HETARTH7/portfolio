@@ -4,17 +4,17 @@ const About = () => {
   return (
     <div className="text-center mt-20 mb-44" id="about">
       <h1 className="text-6xl max-[600px]:text-4xl">About Me</h1>
-      <p className="text-2xl p-10 mt-7 text-center">
+      <p className="text-2xl p-10 text-center">
         Aspiring Software Engineer with ability to learn and collaborate in
         rapidly changing environments and compostions. Eager to tackle software
         developement/ design challanges to achieve lasting impacts on user
         experience.
       </p>
-      <p className="text-2xl p-10 mt-7 text-center">
+      <p className="text-2xl p-10 text-center">
         A Full Stack Developer with a passion for building robust and
         user-friendly web applications.
       </p>
-      <h1 className="text-2xl p-10 mt-7 text-center">
+      <h1 className="text-2xl p-10 text-center">
         Languages and Tools I am familiar with
       </h1>
       <div className="center mt-10">

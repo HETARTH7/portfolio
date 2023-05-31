@@ -1,14 +1,30 @@
-import { redirect } from "next/dist/server/api-utils";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useRef, LegacyRef } from "react";
 import emailjs from "@emailjs/browser";
-import Script from "next/script";
+
 const Contact = () => {
+  const form = useRef<HTMLFormElement>("");
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = () => {
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_vl80kdn",
+        "template_o22h10m",
+        form.current,
+        "TlQ1AGe5pz9tkw7bW"
+      )
+      .then(
+        (result) => {
+          alert("Message sent successfully");
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
     setFullName("");
     setEmail("");
     setMessage("");
@@ -16,7 +32,11 @@ const Contact = () => {
   return (
     <div className="h-screen text-center mt-60" id="contact">
       <h1 className="text-6xl max-[600px]:text-4xl">Get in touch</h1>
-      <form onSubmit={handleSubmit} className="max-w-md mx-auto mt-10">
+      <form
+        ref={form}
+        onSubmit={handleSubmit}
+        className="max-w-md mx-auto mt-10"
+      >
         <div className="mb-4">
           <label
             className="float-left block mb-2 font-semibold"
@@ -26,7 +46,7 @@ const Contact = () => {
           </label>
           <input
             type="text"
-            id="fullName"
+            name="from_name"
             className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
             value={fullName}
             onChange={(e) => setFullName(e.target.value)}
@@ -42,7 +62,7 @@ const Contact = () => {
           </label>
           <input
             type="email"
-            id="email"
+            name="from_email"
             className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -57,7 +77,7 @@ const Contact = () => {
             Message
           </label>
           <textarea
-            id="message"
+            name="message"
             className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
             rows={4}
             value={message}
