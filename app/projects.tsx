@@ -14,7 +14,7 @@ const Projects = () => {
 
             key={index}
           >
-            <div className="w-1/2 items-center">
+            <div className="md:w-1/2 text-center">
               <a className="text-2xl" href={x.URL} target="_blank">
                 {x.name}
               </a>
