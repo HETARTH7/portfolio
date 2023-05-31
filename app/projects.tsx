@@ -8,9 +8,10 @@ const Projects = () => {
       {projectsList.projects.map((x: any, index: any) => {
         return (
           <div
-            className={`flex text-center mb-4 mt-20 ${
+            className={`md:flex text-center mb-4 mt-20 ${
               index % 2 === 0 ? "flex-row" : "flex-row-reverse"
             }`}
+
             key={index}
           >
             <div className="w-1/2 items-center">
@@ -20,7 +21,7 @@ const Projects = () => {
               <p>{x.stack}</p>
               <p>{x.description}</p>
             </div>
-            <div className="w-1/2 pl-24 ">
+            <div className="md:w-1/2 md:pl-24">
               <Image src={x.imageURL} alt="" width={500} height={100} />
             </div>
           </div>

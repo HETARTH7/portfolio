@@ -62,6 +62,13 @@ const About = () => {
         />
         <Image
           className="inline"
+          height="40"
+          width="52"
+          src="https://profilinator.rishav.dev/skills-assets/java-original-wordmark.svg"
+          alt="Java"
+        />
+        <Image
+          className="inline"
           src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/babel/babel-original.svg"
           height="40"
           width="52"
@@ -80,7 +87,13 @@ const About = () => {
           height="40"
           width="52"
           alt="c logo"
-        />
+        /><Image
+        className="inline"
+        src="https://profilinator.rishav.dev/skills-assets/cplusplus-original.svg"
+        height="40"
+        width="52"
+        alt="c logo"
+      />
         <Image
           className="inline"
           src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg"
@@ -167,13 +180,6 @@ const About = () => {
         />
         <Image
           className="inline"
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
-          height="40"
-          width="52"
-          alt="mysql logo"
-        />
-        <Image
-          className="inline"
           src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
           height="40"
           width="52"
@@ -238,6 +244,27 @@ const About = () => {
         <Image
           className="inline"
           src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg"
+          alt="postman"
+          width="40"
+          height="52"
+        />
+        <Image
+          className="inline"
+          src="/chakraui.png"
+          alt="postman"
+          width="40"
+          height="52"
+        />
+        <Image
+          className="inline"
+          src="https://profilinator.rishav.dev/skills-assets/mysql-original-wordmark.svg"
+          alt="postman"
+          width="40"
+          height="52"
+        />
+        <Image
+          className="inline"
+          src="/xampp.png"
           alt="postman"
           width="40"
           height="52"
