@@ -1,6 +1,9 @@
 import Image from "next/image";
 import React, { useState, useRef, LegacyRef } from "react";
 import emailjs from "@emailjs/browser";
+import { Pacifico } from "next/font/google";
+
+const pacifico = Pacifico({ weight: ["400"], subsets: ["latin"] });
 
 const Contact = () => {
   const [fullName, setFullName] = useState("");
@@ -30,7 +33,11 @@ const Contact = () => {
   };
   return (
     <div className="h-screen text-center mt-60" id="contact">
-      <h1 className="text-6xl max-[600px]:text-4xl">Get in touch</h1>
+      <h1
+        className={`${pacifico.className} text-6xl max-[600px]:text-4xl hover:underline hover:decoration-red-500`}
+      >
+        Get in touch
+      </h1>
       <form
         name="form"
         onSubmit={handleSubmit}

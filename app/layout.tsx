@@ -16,9 +16,17 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <link rel="shortcut icon" href="https://fontawesome.com/icons/code?f=classic&s=solid" type="image/x-icon" />
+        <link
+          rel="shortcut icon"
+          href="https://fontawesome.com/icons/code?f=classic&s=solid"
+          type="image/x-icon"
+        />
       </head>
-      <body suppressHydrationWarning={true} className={inter.className}>
+      <body
+        suppressHydrationWarning={true}
+        className={inter.className}
+        style={{ backgroundColor: "#393646", color: "white" }}
+      >
         {children}
       </body>
     </html>

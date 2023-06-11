@@ -65,16 +65,16 @@ const Navbar = () => {
               }`}
             >
               <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-                <li>
+                <li className="hover:underline hover:decoration-red-500">
                   <a href="#">Home</a>
                 </li>
-                <li>
+                <li className="hover:underline hover:decoration-red-500">
                   <a href="#about">About</a>
                 </li>
-                <li>
+                <li className="hover:underline hover:decoration-red-500">
                   <a href="#projects">Projects</a>
                 </li>
-                <li>
+                <li className="hover:underline hover:decoration-red-500">
                   <a href="#contact">Contact</a>
                 </li>
               </ul>

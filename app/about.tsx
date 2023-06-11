@@ -1,9 +1,15 @@
 import Image from "next/image";
+import { Pacifico } from "next/font/google";
 
+const pacifico = Pacifico({ weight: ["400"], subsets: ["latin"] });
 const About = () => {
   return (
     <div className="text-center mt-20 mb-44" id="about">
-      <h1 className="text-6xl max-[600px]:text-4xl">About Me</h1>
+      <h1
+        className={`${pacifico.className} text-6xl max-[600px]:text-4xl hover:underline hover:decoration-red-500`}
+      >
+        About Me
+      </h1>
       <p className="text-2xl p-10 text-center">
         Aspiring Software Engineer with ability to learn and collaborate in
         rapidly changing environments and compostions. Eager to tackle software
