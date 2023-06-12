@@ -35,7 +35,7 @@ const Navbar = () => {
                     {" "}
                     <Image
                       className="float-left"
-                      src={"/dark.png"}
+                      src={"/light.png"}
                       alt=""
                       width={40}
                       height={30}
@@ -115,7 +115,7 @@ const Navbar = () => {
                       {" "}
                       <Image
                         className="float-left"
-                        src={"/dark.png"}
+                        src={"/light.png"}
                         alt=""
                         width={40}
                         height={30}
