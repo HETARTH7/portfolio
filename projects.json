@@ -4,7 +4,7 @@
       "name": "Xrossfit",
       "URL": "https://github.com/HETARTH7/XrossFit-FrontEnd",
       "imageURL": "/xrossfit.png",
-      "stack": "MERN Stack",
+      "stack": "React.js, Node.js, Express.js, MongoDB",
       "description": "A MERN Stack Application for users to keep a log of their daily exercises, buy training equipment and payment with additional functionalities such as user Authentication, payment gateway, admin portal and exercise recommendation."
     },
     {
@@ -26,8 +26,8 @@
       "name": "Notes Keeper App",
       "URL": "https://github.com/HETARTH7/Notes-Keeper-App-Front-End",
       "imageURL": "/keeper.png",
-      "stack": "MERN Stack",
-      "description": "A Full Stack Application for writing short notes.Created using React JS for frontend, Express JS for backend and API, MongoDB and Mongoose for database."
+      "stack": "React.js, Node.js, Express.js, MongoDB",
+      "description": "A MERN Stack Application for writing short notes.Created using React JS for frontend, Express JS for backend and API, MongoDB and Mongoose for database."
     }
   ]
 }

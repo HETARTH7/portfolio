@@ -1,4 +1,5 @@
 "use client";
+import { useState, useEffect } from "react";
 import Navbar from "./navbar";
 import Projects from "./projects";
 import About from "./about";

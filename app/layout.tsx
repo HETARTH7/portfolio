@@ -1,5 +1,7 @@
+"use client";
 import "./globals.css";
 import { Inter } from "next/font/google";
+import { ThemeProvider } from "next-themes";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,9 +27,11 @@ export default function RootLayout({
       <body
         suppressHydrationWarning={true}
         className={inter.className}
-        style={{ backgroundColor: "#393646", color: "white" }}
+        // style={{ backgroundColor: "#1B2430", color: "white" }}
       >
-        {children}
+        <ThemeProvider enableSystem={true} attribute="class">
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

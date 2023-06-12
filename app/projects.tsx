@@ -26,9 +26,9 @@ const Projects = () => {
               <p>{x.stack}</p>
               <p>{x.description}</p>
             </div>
-            <div className="md:w-1/2 md:pl-24 max-[600px]:pl-16">
+            <div className="md:w-1/2 md:pl-24">
               <Image
-                className="rounded-2xl max-[600px]:w-64"
+                className="rounded-2xl"
                 src={x.imageURL}
                 alt=""
                 width={500}

@@ -1,5 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Dancing_Script } from "next/font/google";
+import Image from "next/image";
+import { useTheme } from "next-themes";
 
 const dancingScript = Dancing_Script({
   subsets: ["latin"],
@@ -9,6 +11,13 @@ const dancingScript = Dancing_Script({
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
+  const { systemTheme, theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+  if (!mounted) return null;
+  const currentTheme = theme === "system" ? systemTheme : theme;
   return (
     <div>
       <nav className="w-full">
@@ -21,6 +30,29 @@ const Navbar = () => {
                 </h2>
               </a>
               <div className="md:hidden">
+                {currentTheme === "dark" ? (
+                  <button onClick={() => setTheme("light")}>
+                    {" "}
+                    <Image
+                      className="float-left"
+                      src={"/dark.png"}
+                      alt=""
+                      width={40}
+                      height={30}
+                    />
+                  </button>
+                ) : (
+                  <button onClick={() => setTheme("dark")}>
+                    <Image
+                      className="float-left"
+                      src={"/dark.png"}
+                      alt=""
+                      width={40}
+                      height={30}
+                    />
+                  </button>
+                )}
+
                 <button
                   className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
                   onClick={() => setNavbar(!navbar)}
@@ -76,6 +108,30 @@ const Navbar = () => {
                 </li>
                 <li className="hover:underline hover:decoration-red-500">
                   <a href="#contact">Contact</a>
+                </li>
+                <li>
+                  {currentTheme === "dark" ? (
+                    <button onClick={() => setTheme("light")}>
+                      {" "}
+                      <Image
+                        className="float-left"
+                        src={"/dark.png"}
+                        alt=""
+                        width={40}
+                        height={30}
+                      />
+                    </button>
+                  ) : (
+                    <button onClick={() => setTheme("dark")}>
+                      <Image
+                        className="float-left"
+                        src={"/dark.png"}
+                        alt=""
+                        width={40}
+                        height={30}
+                      />
+                    </button>
+                  )}
                 </li>
               </ul>
             </div>
