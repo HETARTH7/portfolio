@@ -2,14 +2,16 @@
   "projects": [
     {
       "name": "Xrossfit",
-      "URL": "https://github.com/HETARTH7/XrossFit-FrontEnd",
+      "code": "https://github.com/HETARTH7/XrossFit-FrontEnd",
+      "web": "",
       "imageURL": "/xrossfit.png",
-      "stack": "React.js, Node.js, Express.js, MongoDB",
+      "stack": "React.js, Redux, JWT, OAuth2.0, Node.js, Express.js, MongoDB, Mongoose",
       "description": "A MERN Stack Application for users to keep a log of their daily exercises, buy training equipment and payment with additional functionalities such as user Authentication, payment gateway, admin portal and exercise recommendation."
     },
     {
       "name": "Plateformer Game",
-      "URL": "https://github.com/HETARTH7/Platformer-Game",
+      "code": "https://github.com/HETARTH7/Platformer-Game",
+      "web": "",
       "imageURL": "/pygame.png",
       "stack": "Python3, Pygame",
       "description": "This project is a 2D platformer game built using the Pygame library in Python. It includes a player character that can run, jump, and double jump while avoiding obstacles and enemies, and collecting coins"
@@ -17,16 +19,26 @@
 
     {
       "name": "Password Checker",
-      "URL": "https://github.com/HETARTH7/Password-Checker",
+      "code": "https://github.com/HETARTH7/Password-Checker",
+      "web": "",
       "imageURL": "/passwordChecker.png",
       "stack": "Python3, Have I Been Pwned API, Flask",
       "description": "This Flask application lets the user securely check if a password has been pwned or hacked without transmitting the password through theinternet. It uses Troy Hunt’s Have I Been Pwned API to get the passwords that have been leaked in the past using only the first five characters ofthe SHA1‑generated password."
     },
     {
       "name": "Notes Keeper App",
-      "URL": "https://github.com/HETARTH7/Notes-Keeper-App-Front-End",
+      "code": "https://github.com/HETARTH7/Notes-Keeper-App-Front-End",
+      "web": "",
       "imageURL": "/keeper.png",
       "stack": "React.js, Node.js, Express.js, MongoDB",
+      "description": "A MERN Stack Application for writing short notes.Created using React JS for frontend, Express JS for backend and API, MongoDB and Mongoose for database."
+    },
+    {
+      "name": "Weather App",
+      "code": "https://github.com/HETARTH7/Notes-Keeper-App-Front-End",
+      "web": "https://weather-app-hetarth7.vercel.app/",
+      "imageURL": "/weather.png",
+      "stack": "Typescript, Next.js, WeatherAPI",
       "description": "A MERN Stack Application for writing short notes.Created using React JS for frontend, Express JS for backend and API, MongoDB and Mongoose for database."
     }
   ]

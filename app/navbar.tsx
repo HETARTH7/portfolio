@@ -109,30 +109,6 @@ const Navbar = () => {
                 <li className="hover:underline hover:decoration-red-500">
                   <a href="#contact">Contact</a>
                 </li>
-                <li>
-                  {currentTheme === "dark" ? (
-                    <button onClick={() => setTheme("light")}>
-                      {" "}
-                      <Image
-                        className="float-left"
-                        src={"/light.png"}
-                        alt=""
-                        width={40}
-                        height={30}
-                      />
-                    </button>
-                  ) : (
-                    <button onClick={() => setTheme("dark")}>
-                      <Image
-                        className="float-left"
-                        src={"/dark.png"}
-                        alt=""
-                        width={40}
-                        height={30}
-                      />
-                    </button>
-                  )}
-                </li>
               </ul>
             </div>
           </div>

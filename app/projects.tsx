@@ -14,17 +14,31 @@ const Projects = () => {
       {projectsList.projects.map((x: any, index: any) => {
         return (
           <div
-            className={`md:flex text-center mb-4 mt-20 hover:animate-pulse ${
+            className={`md:flex text-center mb-4 mt-20 ${
               index % 2 === 0 ? "flex-row" : "flex-row-reverse"
             }`}
             key={index}
           >
             <div className="md:w-1/2 text-center">
-              <a className="text-4xl" href={x.URL} target="_blank">
-                {x.name}
-              </a>
+              <p className="text-4xl">{x.name}</p>
               <p>{x.stack}</p>
               <p>{x.description}</p>
+              <div className="mt-10">
+                <a
+                  className="ml-5 hover:underline hover:decoration-red-500"
+                  href={x.code}
+                  target="_blank"
+                >
+                  Code
+                </a>
+                <a
+                  className="ml-5 hover:underline hover:decoration-red-500"
+                  href={x.web}
+                  target="_blank"
+                >
+                  Demo
+                </a>
+              </div>
             </div>
             <div className="md:w-1/2 md:pl-24">
               <Image
