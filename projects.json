@@ -6,7 +6,7 @@
       "web": "",
       "imageURL": "/xrossfit.png",
       "stack": "React.js, Redux, JWT, OAuth2.0, Node.js, Express.js, MongoDB, Mongoose",
-      "description": "A MERN Stack Application for users to keep a log of their daily exercises, buy training equipment and payment with additional functionalities such as user Authentication, payment gateway, admin portal and exercise recommendation."
+      "description": "A MERN Stack app for users to keep a log of their daily exercises, buy training equipment and payment with additional functionalities such as user Authentication, payment gateway, admin portal and exercise recommendation."
     },
     {
       "name": "Plateformer Game",
@@ -23,7 +23,7 @@
       "web": "",
       "imageURL": "/passwordChecker.png",
       "stack": "Python3, Have I Been Pwned API, Flask",
-      "description": "This Flask application lets the user securely check if a password has been pwned or hacked without transmitting the password through theinternet. It uses Troy Hunt’s Have I Been Pwned API to get the passwords that have been leaked in the past using only the first five characters ofthe SHA1‑generated password."
+      "description": "This Flask app lets the user securely check if a password has been pwned or hacked without transmitting the password through theinternet. It uses Troy Hunt’s Have I Been Pwned API to get the passwords that have been leaked in the past using only the first five characters ofthe SHA1‑generated password."
     },
     {
       "name": "Notes Keeper App",
@@ -31,7 +31,7 @@
       "web": "",
       "imageURL": "/keeper.png",
       "stack": "React.js, Node.js, Express.js, MongoDB",
-      "description": "A MERN Stack Application for writing short notes.Created using React JS for frontend, Express JS for backend and API, MongoDB and Mongoose for database."
+      "description": "A MERN Stack app for writing short notes.Created using React JS for frontend, Express JS for backend and API, MongoDB and Mongoose for database."
     },
     {
       "name": "Weather App",
@@ -39,7 +39,7 @@
       "web": "https://weather-app-hetarth7.vercel.app/",
       "imageURL": "/weather.png",
       "stack": "Typescript, Next.js, WeatherAPI",
-      "description": "A MERN Stack Application for writing short notes.Created using React JS for frontend, Express JS for backend and API, MongoDB and Mongoose for database."
+      "description": "A front-end app that provides real-time weather information for any location."
     }
   ]
 }
