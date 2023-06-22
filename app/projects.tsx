@@ -31,13 +31,15 @@ const Projects = () => {
                 >
                   Code
                 </a>
-                <a
-                  className="ml-5 hover:underline hover:decoration-red-500"
-                  href={x.web}
-                  target="_blank"
-                >
-                  Demo
-                </a>
+                {x.web === "" ? null : (
+                  <a
+                    className="ml-5 hover:underline hover:decoration-red-500"
+                    href={x.web}
+                    target="_blank"
+                  >
+                    Demo
+                  </a>
+                )}
               </div>
             </div>
             <div className="md:w-1/2 md:pl-24">
