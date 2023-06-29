@@ -37,7 +37,7 @@
       "name": "Weather App",
       "code": "https://github.com/HETARTH7/Notes-Keeper-App-Front-End",
       "web": "https://weather-app-hetarth7.vercel.app/",
-      "imageURL": "/weather.png",
+      "imageURL": "/weather-app.png",
       "stack": "Typescript, Next.js, WeatherAPI",
       "description": "A front-end app that provides real-time weather information for any location."
     }

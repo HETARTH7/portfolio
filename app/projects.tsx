@@ -25,7 +25,7 @@ const Projects = () => {
               <p>{x.description}</p>
               <div className="mt-10">
                 <a
-                  className="ml-5 hover:underline hover:decoration-red-500"
+                  className="m-5 hover:underline hover:decoration-red-500"
                   href={x.code}
                   target="_blank"
                 >
@@ -33,7 +33,7 @@ const Projects = () => {
                 </a>
                 {x.web === "" ? null : (
                   <a
-                    className="ml-5 hover:underline hover:decoration-red-500"
+                    className="m-5 hover:underline hover:decoration-red-500"
                     href={x.web}
                     target="_blank"
                   >
@@ -44,7 +44,7 @@ const Projects = () => {
             </div>
             <div className="md:w-1/2 md:pl-24">
               <Image
-                className="rounded-2xl"
+                className="rounded-2xl mt-10"
                 src={x.imageURL}
                 alt=""
                 width={500}
