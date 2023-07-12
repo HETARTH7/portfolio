@@ -4,7 +4,7 @@
       "name": "Xrossfit",
       "code": "https://github.com/HETARTH7/XrossFit-FrontEnd",
       "web": "",
-      "imageURL": "/xrossfit.png",
+      "imageURL": "/xrossFit.png",
       "stack": "React.js, Redux, JWT, OAuth2.0, Node.js, Express.js, MongoDB, Mongoose",
       "description": "A MERN Stack app for users to keep a log of their daily exercises, buy training equipment and payment with additional functionalities such as user Authentication, payment gateway, admin portal and exercise recommendation."
     },
@@ -40,6 +40,14 @@
       "imageURL": "/weather-app.png",
       "stack": "Typescript, Next.js, WeatherAPI",
       "description": "A front-end app that provides real-time weather information for any location."
+    },
+    {
+      "name": "Movie Ticekt Booking App",
+      "code": "https://github.com/HETARTH7/Movie-Ticket-Booking-System",
+      "web": "https://movie-ticket-booking-system-six.vercel.app/",
+      "imageURL": "/movie.png",
+      "stack": "React.js, JWT, Node.js, Express.js, MongoDB, Mongoose",
+      "description": "It is a user-friendly and efficient platform that simplifies the process of booking movie tickets, allowing users to browse available movies, select preferred seats, and securely complete their ticket purchase, enhancing the overall movie-going experience."
     }
   ]
 }

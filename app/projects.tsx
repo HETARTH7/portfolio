@@ -19,9 +19,9 @@ const Projects = () => {
             }`}
             key={index}
           >
-            <div className="md:w-1/2 text-center">
-              <p className="text-4xl">{x.name}</p>
-              <p>{x.stack}</p>
+            <div className="md:w-1/2 text-center mt-10">
+              <p className="text-4xl mb-4">{x.name}</p>
+              <p className="mb-2 text-red-500">{x.stack}</p>
               <p>{x.description}</p>
               <div className="mt-10">
                 <a
