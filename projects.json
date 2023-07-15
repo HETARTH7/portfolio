@@ -2,10 +2,10 @@
   "projects": [
     {
       "name": "Xrossfit",
-      "code": "https://github.com/HETARTH7/XrossFit-FrontEnd",
+      "code": "https://github.com/HETARTH7/XrossFit ",
       "web": "",
       "imageURL": "/Xross-Fit.png",
-      "stack": "React.js, Redux, JWT, OAuth2.0, Node.js, Express.js, MongoDB, Mongoose",
+      "stack": "React.js, Redux, JWT, Node.js, Express.js, MongoDB, Mongoose",
       "description": "A MERN Stack app for users to keep a log of their daily exercises, buy training equipment and payment with additional functionalities such as user Authentication, payment gateway, admin portal and exercise recommendation."
     },
     {
@@ -27,7 +27,7 @@
     },
     {
       "name": "Notes Keeper App",
-      "code": "https://github.com/HETARTH7/Notes-Keeper-App-Front-End",
+      "code": "https://github.com/HETARTH7/Notes-Keeper",
       "web": "",
       "imageURL": "/keeper.png",
       "stack": "React.js, Node.js, Express.js, MongoDB",
@@ -35,7 +35,7 @@
     },
     {
       "name": "Weather App",
-      "code": "https://github.com/HETARTH7/Notes-Keeper-App-Front-End",
+      "code": "https://github.com/HETARTH7/Weather-App",
       "web": "https://weather-app-hetarth7.vercel.app/",
       "imageURL": "/weather-app.png",
       "stack": "Typescript, Next.js, WeatherAPI",
