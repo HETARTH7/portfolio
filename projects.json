@@ -20,8 +20,8 @@
     {
       "name": "Password Checker",
       "code": "https://github.com/HETARTH7/Password-Checker",
-      "web": "",
-      "imageURL": "/passwordChecker.png",
+      "web": "https://password-checker.onrender.com/",
+      "imageURL": "/pswdchecker.png",
       "stack": "Python3, Have I Been Pwned API, Flask",
       "description": "This Flask app lets the user securely check if a password has been pwned or hacked without transmitting the password through theinternet. It uses Troy Hunt’s Have I Been Pwned API to get the passwords that have been leaked in the past using only the first five characters ofthe SHA1‑generated password."
     },
