@@ -13,21 +13,26 @@ const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
   const { systemTheme, theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const [egg, setEgg] = useState("Hetarth");
   useEffect(() => {
     setMounted(true);
   }, []);
   if (!mounted) return null;
   const currentTheme = theme === "system" ? systemTheme : theme;
+
   return (
     <div>
       <nav className="w-full">
         <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div>
             <div className="flex items-center justify-between py-3 md:py-5 md:block font-bold">
-              <a className="text-4xl" href="#">
-                <h2 className={dancingScript.className}>
-                  {"<"}Hetarth{"/>"}
-                </h2>
+              <a
+                className="text-4xl"
+                onMouseEnter={() => setEgg("Howdy, mate!")}
+                onMouseLeave={() => setEgg("<Hetarth/>")}
+                href="#"
+              >
+                <h2 className={dancingScript.className}>{egg}</h2>
               </a>
               <div className="md:hidden">
                 {currentTheme === "dark" ? (
@@ -97,16 +102,16 @@ const Navbar = () => {
               }`}
             >
               <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-                <li className="hover:underline hover:decoration-red-500">
+                <li className="hover:text-sky-500 hover:pb-2">
                   <a href="#">Home</a>
                 </li>
-                <li className="hover:underline hover:decoration-red-500">
+                <li className="hover:text-sky-500 hover:pb-2">
                   <a href="#about">About</a>
                 </li>
-                <li className="hover:underline hover:decoration-red-500">
+                <li className="hover:text-sky-500 hover:pb-2">
                   <a href="#projects">Projects</a>
                 </li>
-                <li className="hover:underline hover:decoration-red-500">
+                <li className="hover:text-sky-500 hover:pb-2">
                   <a href="#contact">Contact</a>
                 </li>
                 <li className="max-[600px]:hidden">
