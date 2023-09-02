@@ -13,7 +13,7 @@ const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
   const { systemTheme, theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
-  const [egg, setEgg] = useState("Hetarth");
+  const [egg, setEgg] = useState("<Hetarth/>");
   useEffect(() => {
     setMounted(true);
   }, []);
