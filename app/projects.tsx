@@ -7,7 +7,7 @@ const Projects = () => {
   return (
     <div className="text-center mt-20 mb-10" id="projects">
       <h1
-        className={`${pacifico.className} font-sans text-6xl max-[600px]:text-4xl hover:underline hover:decoration-red-500`}
+        className={`${pacifico.className} font-sans text-6xl max-[600px]:text-4xl hover:underline hover:text-sky-500`}
       >
         Projects
       </h1>
@@ -21,11 +21,11 @@ const Projects = () => {
           >
             <div className="md:w-1/2 text-center mt-10">
               <p className="text-4xl mb-4">{x.name}</p>
-              <p className="mb-2 text-red-500">{x.stack}</p>
+              <p className="mb-2 text-teal-700">{x.stack}</p>
               <p>{x.description}</p>
               <div className="mt-10">
                 <a
-                  className="m-5 hover:underline hover:decoration-red-500"
+                  className="m-5 hover:text-sky-500"
                   href={x.code}
                   target="_blank"
                 >
@@ -33,7 +33,7 @@ const Projects = () => {
                 </a>
                 {x.web === "" ? null : (
                   <a
-                    className="m-5 hover:underline hover:decoration-red-500"
+                    className="m-5 hover:text-sky-500"
                     href={x.web}
                     target="_blank"
                   >
@@ -44,7 +44,7 @@ const Projects = () => {
             </div>
             <div className="md:w-1/2 md:pl-24">
               <Image
-                className="rounded-2xl mt-10"
+                className="rounded-2xl mt-10 border-8"
                 src={x.imageURL}
                 alt=""
                 width={500}

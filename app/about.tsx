@@ -15,24 +15,21 @@ const About = () => {
   return (
     <div className="text-center mt-20 mb-44" id="about">
       <h1
-        className={`${pacifico.className} text-6xl max-[600px]:text-4xl hover:underline hover:decoration-red-500`}
+        className={`${pacifico.className} text-6xl max-[600px]:text-4xl hover:underline hover:text-sky-500 pt-12`}
       >
         About Me
       </h1>
-      <p className="text-2xl p-10 text-center">
-        Aspiring Software Engineer with ability to learn and collaborate in
+      <p className="text-2xl p-6 text-center">
+        I am a Software Developer with ability to learn and collaborate in
         rapidly changing environments and compostions. Eager to tackle software
         developement/ design challanges to achieve lasting impacts on user
         experience.
       </p>
-      <p className="text-2xl p-10 text-center">
-        A Full Stack Developer with a passion for building robust and
-        user-friendly web applications.
-      </p>
-      <h1 className="text-2xl p-10 text-center">
-        Languages and Tools I am familiar with
+      <h1 className="text-2xl p-6 text-center">
+        Technical Skills: Full Stack Development, Artificial Intelligence and
+        Data Visualization
       </h1>
-      <div className="mt-10">
+      <div className="min-[600px]:m-24">
         <Image
           className="inline m-3"
           src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"

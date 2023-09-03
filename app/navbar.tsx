@@ -102,16 +102,16 @@ const Navbar = () => {
               }`}
             >
               <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-                <li className="hover:text-sky-500 hover:pb-2">
+                <li className="hover:text-sky-500">
                   <a href="#">Home</a>
                 </li>
-                <li className="hover:text-sky-500 hover:pb-2">
+                <li className="hover:text-sky-500">
                   <a href="#about">About</a>
                 </li>
-                <li className="hover:text-sky-500 hover:pb-2">
+                <li className="hover:text-sky-500">
                   <a href="#projects">Projects</a>
                 </li>
-                <li className="hover:text-sky-500 hover:pb-2">
+                <li className="hover:text-sky-500">
                   <a href="#contact">Contact</a>
                 </li>
                 <li className="max-[600px]:hidden">
