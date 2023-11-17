@@ -395,6 +395,46 @@ const About = () => {
           }}
           height="40"
         />
+        <Image
+          className="inline m-3"
+          src="https://cdn.worldvectorlogo.com/logos/django.svg"
+          alt="django"
+          width="40"
+          onClick={() => {
+            window.open("https://www.djangoproject.com/", "_blank");
+          }}
+          height="40"
+        />
+        <Image
+          className="inline m-3"
+          src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg"
+          alt="gcp"
+          width="40"
+          onClick={() => {
+            window.open("https://cloud.google.com/", "_blank");
+          }}
+          height="40"
+        />
+        <Image
+          className="inline m-3"
+          src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg"
+          alt="tensorflow"
+          width="40"
+          onClick={() => {
+            window.open("https://www.tensorflow.org/", "_blank");
+          }}
+          height="40"
+        />
+        <Image
+          className="inline m-3"
+          src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg"
+          alt="pytorch"
+          width="40"
+          onClick={() => {
+            window.open("https://pytorch.org/", "_blank");
+          }}
+          height="40"
+        />
       </div>
     </div>
   );

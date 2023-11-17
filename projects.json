@@ -9,12 +9,12 @@
       "description": "A MERN Stack app for users to keep a log of their daily exercises, buy training equipment and payment with additional functionalities such as user Authentication, payment gateway, admin portal and exercise recommendation."
     },
     {
-      "name": "Plateformer Game",
-      "code": "https://github.com/HETARTH7/Platformer-Game",
+      "name": "Autonomous Disease Prediction",
+      "code": "https://github.com/HETARTH7/Disease-Prediction",
       "web": "",
-      "imageURL": "/pygame.png",
-      "stack": "Python3, Pygame",
-      "description": "This project is a 2D platformer game built using the Pygame library in Python. It includes a player character that can run, jump, and double jump while avoiding obstacles and enemies, and collecting coins"
+      "imageURL": "/disease pred.png",
+      "stack": "Python3, sklearn, Flask",
+      "description": "This is a disease prediction app, employing SVM, Naive Bayes, and Random Forest models to analyze 5 user-input symptoms, enhancing early detection for proactive healthcare management."
     },
 
     {

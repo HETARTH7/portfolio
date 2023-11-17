@@ -44,7 +44,7 @@ const Projects = () => {
             </div>
             <div className="md:w-1/2 md:pl-24">
               <Image
-                className="rounded-2xl mt-10 border-8"
+                className="rounded-2xl mt-10 border-2"
                 src={x.imageURL}
                 alt=""
                 width={500}
