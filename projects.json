@@ -3,8 +3,8 @@
     {
       "name": "Xrossfit",
       "code": "https://github.com/HETARTH7/XrossFit ",
-      "web": "",
-      "imageURL": "/Xross-Fit.png",
+      "web": "https://xross-fit.vercel.app/",
+      "imageURL": "/xf.png",
       "stack": "React.js, Redux, JWT, Node.js, Express.js, MongoDB, Mongoose",
       "description": "A MERN Stack app for users to keep a log of their daily exercises, buy training equipment and payment with additional functionalities such as user Authentication, payment gateway, admin portal and exercise recommendation."
     },
@@ -12,11 +12,10 @@
       "name": "Autonomous Disease Prediction",
       "code": "https://github.com/HETARTH7/Disease-Prediction",
       "web": "",
-      "imageURL": "/disease pred.png",
+      "imageURL": "/diseasepred.png",
       "stack": "Python3, sklearn, Flask",
       "description": "This is a disease prediction app, employing SVM, Naive Bayes, and Random Forest models to analyze 5 user-input symptoms, enhancing early detection for proactive healthcare management."
     },
-
     {
       "name": "Password Checker",
       "code": "https://github.com/HETARTH7/Password-Checker",
@@ -26,28 +25,12 @@
       "description": "This Flask app lets the user securely check if a password has been pwned or hacked without transmitting the password through theinternet. It uses Troy Hunt’s Have I Been Pwned API to get the passwords that have been leaked in the past using only the first five characters ofthe SHA1‑generated password."
     },
     {
-      "name": "Notes Keeper App",
-      "code": "https://github.com/HETARTH7/Notes-Keeper",
-      "web": "",
-      "imageURL": "/keeper.png",
-      "stack": "React.js, Node.js, Express.js, MongoDB",
-      "description": "A MERN Stack app for writing short notes.Created using React JS for frontend, Express JS for backend and API, MongoDB and Mongoose for database."
-    },
-    {
       "name": "Weather App",
       "code": "https://github.com/HETARTH7/Weather-App",
       "web": "https://weather-app-hetarth7.vercel.app/",
       "imageURL": "/weather-app.png",
       "stack": "Typescript, Next.js, WeatherAPI",
       "description": "A front-end app that provides real-time weather information for any location."
-    },
-    {
-      "name": "Movie Ticket Booking App",
-      "code": "https://github.com/HETARTH7/Movie-Ticket-Booking-System",
-      "web": "https://movie-ticket-booking-system-six.vercel.app/",
-      "imageURL": "/movie.png",
-      "stack": "React.js, JWT, Node.js, Express.js, MongoDB, Mongoose",
-      "description": "It is a user-friendly and efficient platform that simplifies the process of booking movie tickets, allowing users to browse available movies, select preferred seats, and securely complete their ticket purchase, enhancing the overall movie-going experience."
     }
   ]
 }
