@@ -31,6 +31,14 @@
       "imageURL": "/weather-app.png",
       "stack": "Typescript, Next.js, WeatherAPI",
       "description": "A front-end app that provides real-time weather information for any location."
+    },
+    {
+      "name": "CodeQuiz",
+      "code": "https://github.com/HETARTH7/CodeQuiz",
+      "web": "https://hetarth7.github.io/CodeQuiz/",
+      "imageURL": "/codequiz.png",
+      "stack": "HTML, CSS, JavaScript",
+      "description": "A dynamic quiz application for software developers, offering diverse topics like Software Engineering, Data Structures, and Java."
     }
   ]
 }
