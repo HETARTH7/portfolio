@@ -3,9 +3,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { devLinks } from "../data";
 import { useState } from "react";
-import { pacifico } from "../page";
 import emailjs from "@emailjs/browser";
 import Link from "next/link";
+import { Pacifico } from "next/font/google";
+
+export const pacifico = Pacifico({ weight: ["400"], subsets: ["latin"] });
 
 export default function Contact() {
   const [fullName, setFullName] = useState("");

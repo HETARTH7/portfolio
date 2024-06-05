@@ -4,7 +4,13 @@ import { faMoon, faSun, faBars } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { links } from "../data";
-import { dancingScript } from "../page";
+import { Dancing_Script } from "next/font/google";
+
+const dancingScript = Dancing_Script({
+  subsets: ["latin"],
+  weight: ["700"],
+  display: "swap",
+});
 
 export default function Navbar() {
   const { systemTheme, theme, setTheme } = useTheme();
