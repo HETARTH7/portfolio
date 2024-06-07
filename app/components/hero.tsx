@@ -8,12 +8,16 @@ const dancingScript = Dancing_Script({
 
 const Hero = () => {
   return (
-    <div className="h-screen flex justify-center items-center">
+    <div className="h-screen flex justify-center items-center p-4">
       <div className="text-center m-0">
-        <h1 className={`${dancingScript.className} text-8xl`}>
+        <h1
+          className={`${dancingScript.className} text-5xl sm:text-6xl md:text-7xl lg:text-8xl`}
+        >
           Hi, my name is Hetarth
-        </h1><br />
-        <h2 className="text-4xl text-right">Software Engineer</h2>
+        </h1>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl text-right mt-4">
+          Software Engineer
+        </h2>
       </div>
     </div>
   );
