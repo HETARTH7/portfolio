@@ -79,15 +79,25 @@ export type Projects = {
 
 export const projects: Projects = [
   {
-    name: "Xrossfit",
+    name: "Xrossfit: A Fitness App",
     imgUrl: "/xrossfit-img.png",
     githubUrl: "https://github.com/HETARTH7/XrossFit",
     devLink: "https://xross-fit.vercel.app/",
+    description:
+      "Javascript, ReactJS, NodeJS, ExpressJS, MongoDB, Mongoose, JWT, Socket.io",
   },
   {
     name: "Weather App",
     imgUrl: "/weather-app-img.png",
     githubUrl: "https://github.com/HETARTH7/Weather-App",
     devLink: "https://weather-app-hetarth7.vercel.app/",
+    description: "NextJS, Typescript",
+  },
+  {
+    name: "Password Checker App",
+    imgUrl: "/pswd-checker-img.png",
+    githubUrl: "https://github.com/HETARTH7/Password-Checker",
+    devLink: "https://password-checker.onrender.com/",
+    description: "Python3, Flask, Have I Been Pwned API",
   },
 ];

@@ -27,7 +27,7 @@ export default function Navbar() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="fixed w-full md:flex items-center justify-between p-4">
+    <nav className="w-full md:flex items-center justify-between p-4">
       <Link className={`${dancingScript.className} text-2xl`} href="/">
         {"<Hetarth />"}
       </Link>
