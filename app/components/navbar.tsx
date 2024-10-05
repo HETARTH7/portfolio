@@ -1,7 +1,18 @@
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import Menu from "@mui/material/Menu";
+import MenuIcon from "@mui/icons-material/Menu";
+import Container from "@mui/material/Container";
+import Button from "@mui/material/Button";
+import Tooltip from "@mui/material/Tooltip";
+import MenuItem from "@mui/material/MenuItem";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon, faSun, faBars } from "@fortawesome/free-solid-svg-icons";
-import { useEffect, useState } from "react";
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+import { MouseEvent, useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { links } from "../data";
 import { Dancing_Script } from "next/font/google";
@@ -12,10 +23,14 @@ const dancingScript = Dancing_Script({
   display: "swap",
 });
 
+const pages = [...links];
+const settings = ["Profile", "Account", "Dashboard", "Logout"];
+
 export default function Navbar() {
   const { systemTheme, theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
+
+  const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -24,43 +39,111 @@ export default function Navbar() {
   if (!mounted) return null;
   const currentTheme = theme === "system" ? systemTheme : theme;
 
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const handleOpenNavMenu = (event: MouseEvent<HTMLElement>) => {
+    setAnchorElNav(event.currentTarget);
+  };
+
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
 
   return (
-    <nav className="w-full md:flex items-center justify-between p-4">
-      <Link className={`${dancingScript.className} text-2xl`} href="/">
-        {"<Hetarth />"}
-      </Link>
-      <ul className="hidden md:flex justify-center me-10">
-        {links.map((link, index) => (
-          <li className="ms-5 me-5 py-2" key={index}>
-            <Link href={link.href}>{link.name}</Link>
-          </li>
-        ))}
-      </ul>
-      <div className="md:hidden float-end">
-        <button onClick={toggleMenu}>
-          <FontAwesomeIcon icon={faBars} className="size-7" />
-        </button>
-      </div>
-      <div className="hidden md:flex">
-        {currentTheme === "dark" ? (
-          <button onClick={() => setTheme("light")}>
-            <FontAwesomeIcon className="size-7" icon={faSun} />
-          </button>
-        ) : (
-          <button onClick={() => setTheme("dark")}>
-            <FontAwesomeIcon className="size-7" icon={faMoon} />
-          </button>
-        )}
-      </div>
-      <ul hidden={!isOpen} className="md:hidden justify-center me-10">
-        {links.map((link, index) => (
-          <li className="ms-5 me-5 py-2" key={index}>
-            <Link href={link.href}>{link.name}</Link>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <AppBar position="static" color="transparent" enableColorOnDark>
+      <Container maxWidth="xl">
+        <Toolbar disableGutters>
+          <Typography
+            variant="h6"
+            noWrap
+            sx={{
+              mr: 2,
+              display: { xs: "none", md: "flex" },
+              color: "inherit",
+              textDecoration: "none",
+            }}
+          >
+            <Link className={`${dancingScript.className} text-2xl `} href="/">
+              {"<Hetarth />"}
+            </Link>
+          </Typography>
+
+          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+            <IconButton
+              size="large"
+              aria-label="account of current user"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleOpenNavMenu}
+              color="inherit"
+            >
+              <MenuIcon />
+            </IconButton>
+            <Menu
+              id="menu-appbar"
+              anchorEl={anchorElNav}
+              anchorOrigin={{
+                vertical: "bottom",
+                horizontal: "left",
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: "top",
+                horizontal: "left",
+              }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+              sx={{ display: { xs: "block", md: "none" } }}
+            >
+              {pages.map((page, index) => (
+                <MenuItem key={index} onClick={handleCloseNavMenu}>
+                  <Typography sx={{ textAlign: "center", color: "inherit" }}>
+                    <Link href={page.href}>{page.name}</Link>
+                  </Typography>
+                </MenuItem>
+              ))}
+            </Menu>
+          </Box>
+          <Typography
+            variant="h5"
+            noWrap
+            sx={{
+              mr: 2,
+              display: { xs: "flex", md: "none" },
+              flexGrow: 1,
+              color: "inherit",
+              textDecoration: "none",
+            }}
+          >
+            <Link className={`${dancingScript.className} text-2xl `} href="/">
+              {"<Hetarth />"}
+            </Link>
+          </Typography>
+
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+            {pages.map((page, index) => (
+              <Button
+                key={index}
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: "inherit", display: "block" }}
+              >
+                <Link href={page.href}>{page.name}</Link>
+              </Button>
+            ))}
+          </Box>
+          <Box sx={{ flexGrow: 0 }}>
+            <Tooltip title="Open settings">
+              {currentTheme === "dark" ? (
+                <button onClick={() => setTheme("light")}>
+                  <FontAwesomeIcon className="size-7" icon={faSun} />
+                </button>
+              ) : (
+                <button onClick={() => setTheme("dark")}>
+                  <FontAwesomeIcon className="size-7" icon={faMoon} />
+                </button>
+              )}
+            </Tooltip>
+          </Box>
+        </Toolbar>
+      </Container>
+    </AppBar>
   );
 }
