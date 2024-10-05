@@ -2,10 +2,12 @@
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { devLinks } from "../data";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import Link from "next/link";
 import { Pacifico } from "next/font/google";
+import { Alert } from "@mui/material";
+import { CheckCircleOutline } from "@mui/icons-material";
 
 export const pacifico = Pacifico({ weight: ["400"], subsets: ["latin"] });
 
@@ -13,6 +15,8 @@ export default function Contact() {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [success, setSuccess] = useState(false);
+  const [fadeOut, setFadeOut] = useState(false);
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
@@ -25,7 +29,9 @@ export default function Contact() {
       )
       .then(
         (result) => {
-          alert("Message sent successfully");
+          setSuccess(true);
+          setFadeOut(false); // Reset fade-out when success message is displayed
+          console.log("Message sent successfully");
         },
         (error) => {
           console.log(error);
@@ -35,8 +41,33 @@ export default function Contact() {
     setEmail("");
     setMessage("");
   };
+
+  // Handle fading out the success alert after 5 seconds
+  useEffect(() => {
+    if (success) {
+      const timer = setTimeout(() => setFadeOut(true), 5000); // Fade out after 5 seconds
+      const hideAlertTimer = setTimeout(() => setSuccess(false), 6000); // Completely hide after fade out
+
+      return () => {
+        clearTimeout(timer);
+        clearTimeout(hideAlertTimer);
+      };
+    }
+  }, [success]);
+
   return (
     <div id="contact" className="h-screen text-center pt-16">
+      {success && (
+        <Alert
+          className={`fixed top-5 left-1/2 transform -translate-x-1/2 w-[90%] max-w-sm transition-opacity duration-1000 ease-out ${
+            fadeOut ? "opacity-0" : "opacity-100"
+          }`}
+          icon={<CheckCircleOutline fontSize="inherit" />}
+          severity="success"
+        >
+          Message Sent Successfully
+        </Alert>
+      )}
       <h1
         className={`${pacifico.className} text-6xl max-[600px]:text-4xl hover:underline`}
       >

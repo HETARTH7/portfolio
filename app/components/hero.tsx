@@ -15,7 +15,7 @@ const Hero = () => {
         >
           Hi, my name is Hetarth
         </h1>
-        <h2 className="text-2xl sm:text-3xl md:text-4xl text-right mt-4">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl text-center mt-4">
           Software Engineer
         </h2>
       </div>
