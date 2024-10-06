@@ -53,15 +53,14 @@ export const skills: List = [
   { name: "Artificial Intelligence" },
   { name: "Computer Vision" },
   { name: "Natural Language Processing" },
-  { name: "Data Visualization" },
 ];
 
 export const programmingLanguages: List = [
-  { name: "Javascript" },
   { name: "Python" },
-  { name: "C++" },
   { name: "Java" },
-  { name: "R" },
+  { name: "Javascript" },
+  { name: "Typescript" },
+  { name: "C++" },
 ];
 
 export const jobs: List = [

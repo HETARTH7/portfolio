@@ -32,7 +32,7 @@ export default function About() {
       </div>
       <div className="max-w-4xl w-full">
         <h2 className="text-3xl font-semibold mb-8 text-right">
-          I&apos;m familiar with
+          Programming Languages I know
         </h2>
         <div className="flex flex-wrap justify-center sm:justify-end gap-4">
           {programmingLanguages?.map((programmingLanguage, index) => (

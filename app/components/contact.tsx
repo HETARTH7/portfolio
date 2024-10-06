@@ -7,7 +7,8 @@ import emailjs from "@emailjs/browser";
 import Link from "next/link";
 import { Pacifico } from "next/font/google";
 import { Alert } from "@mui/material";
-import { CheckCircleOutline } from "@mui/icons-material";
+import { CheckCircleOutline, ErrorOutline } from "@mui/icons-material";
+import { LoadingButton } from "@mui/lab";
 
 export const pacifico = Pacifico({ weight: ["400"], subsets: ["latin"] });
 
@@ -16,24 +17,32 @@ export default function Contact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [success, setSuccess] = useState(false);
-  const [fadeOut, setFadeOut] = useState(false);
+  const [error, setError] = useState(false);
+  const [fadeOutSuccess, setFadeOutSuccess] = useState(false);
+  const [fadeOutError, setFadeOutError] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e: any) => {
+    setLoading(true);
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_wv2rm1d",
-        "template_961h9ca",
+        process.env.NEXT_PUBLIC_SERVICE_ID || "",
+        process.env.NEXT_PUBLIC_TEMPLATE_ID || "",
         "form",
-        "e_iWXr-Gvt2_YrzdO"
+        process.env.NEXT_PUBLIC_OPTIONS
       )
       .then(
         (result) => {
           setSuccess(true);
-          setFadeOut(false); // Reset fade-out when success message is displayed
+          setFadeOutSuccess(false);
+          setLoading(false);
           console.log("Message sent successfully");
         },
         (error) => {
+          setError(true);
+          setFadeOutError(false);
+          setLoading(false);
           console.log(error);
         }
       );
@@ -42,11 +51,10 @@ export default function Contact() {
     setMessage("");
   };
 
-  // Handle fading out the success alert after 5 seconds
   useEffect(() => {
     if (success) {
-      const timer = setTimeout(() => setFadeOut(true), 5000); // Fade out after 5 seconds
-      const hideAlertTimer = setTimeout(() => setSuccess(false), 6000); // Completely hide after fade out
+      const timer = setTimeout(() => setFadeOutSuccess(true), 5000);
+      const hideAlertTimer = setTimeout(() => setSuccess(false), 6000);
 
       return () => {
         clearTimeout(timer);
@@ -55,17 +63,40 @@ export default function Contact() {
     }
   }, [success]);
 
+  useEffect(() => {
+    if (error) {
+      const timer = setTimeout(() => setFadeOutError(true), 5000);
+      const hideAlertTimer = setTimeout(() => setError(false), 6000);
+
+      return () => {
+        clearTimeout(timer);
+        clearTimeout(hideAlertTimer);
+      };
+    }
+  }, [error]);
+
   return (
     <div id="contact" className="h-screen text-center pt-16">
       {success && (
         <Alert
           className={`fixed top-5 left-1/2 transform -translate-x-1/2 w-[90%] max-w-sm transition-opacity duration-1000 ease-out ${
-            fadeOut ? "opacity-0" : "opacity-100"
+            fadeOutSuccess ? "opacity-0" : "opacity-100"
           }`}
           icon={<CheckCircleOutline fontSize="inherit" />}
           severity="success"
         >
           Message Sent Successfully
+        </Alert>
+      )}
+      {error && (
+        <Alert
+          className={`fixed top-16 left-1/2 transform -translate-x-1/2 w-[90%] max-w-sm transition-opacity duration-1000 ease-out ${
+            fadeOutError ? "opacity-0" : "opacity-100"
+          }`}
+          icon={<ErrorOutline fontSize="inherit" />}
+          severity="error"
+        >
+          Error Sending Message
         </Alert>
       )}
       <h1
@@ -91,6 +122,7 @@ export default function Contact() {
             className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
             value={fullName}
             onChange={(e) => setFullName(e.target.value)}
+            disabled={loading}
             required
           />
         </div>
@@ -107,6 +139,7 @@ export default function Contact() {
             className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            disabled={loading}
             required
           />
         </div>
@@ -123,15 +156,17 @@ export default function Contact() {
             rows={4}
             value={message}
             onChange={(e) => setMessage(e.target.value)}
+            disabled={loading}
             required
           ></textarea>
         </div>
-        <button
+        <LoadingButton
+          loading={loading}
           type="submit"
           className="w-full py-2 px-4 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
         >
           Send
-        </button>
+        </LoadingButton>
       </form>
       <h2 className="text-4xl mt-10 max-[600px]:text-2xl">Find me on</h2>
       {devLinks?.map((devLink, index) => {
