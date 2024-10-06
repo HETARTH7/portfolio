@@ -24,7 +24,6 @@ const dancingScript = Dancing_Script({
 });
 
 const pages = [...links];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 export default function Navbar() {
   const { systemTheme, theme, setTheme } = useTheme();

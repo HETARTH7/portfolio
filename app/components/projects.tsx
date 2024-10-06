@@ -1,23 +1,19 @@
-import { useState } from "react";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faAngleLeft, faLink } from "@fortawesome/free-solid-svg-icons";
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { projects } from "../data";
-import Image from "next/image";
 import Link from "next/link";
-import { faAngleRight } from "@fortawesome/free-solid-svg-icons/faAngleRight";
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Typography,
+} from "@mui/material";
+import { ExpandMore } from "@mui/icons-material";
+import { useTheme } from "next-themes";
 
 export default function Projects() {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const n = projects.length;
-
-  const nextSlide = () => {
-    setActiveIndex((prevIndex) => (prevIndex + 1) % n);
-  };
-
-  const prevSlide = () => {
-    setActiveIndex((prevIndex) => (prevIndex - 1 + n) % n);
-  };
+  const { systemTheme, theme, setTheme } = useTheme();
 
   return (
     <div
@@ -25,71 +21,39 @@ export default function Projects() {
       className="h-screen flex flex-col justify-center items-center mt-64 mb-64"
     >
       <h1 className="text-3xl mb-10">Projects</h1>
-
-      <div className="relative w-full max-w-4xl justify-center items-center hidden lg:flex">
+      <div className="relative w-full max-w-4xl justify-center items-center">
         {projects?.map((project, index) => {
           return (
-            <div
-              className={`${
-                activeIndex === index ? "block" : "hidden"
-              } text-center`}
+            <Accordion
               key={index}
+              sx={{ color: "inherit", bgcolor: "inherit" }}
             >
-              <h1 className="text-2xl mb-4">{project?.name}</h1>
-              <p className="text-gray-400 mb-5">{project?.description}</p>
-              <Image
-                src={project?.imgUrl}
-                alt=""
-                width={800}
-                height={800}
-                className="w-full h-auto mb-4"
-              />
-              <div className="flex justify-center space-x-4">
+              <AccordionSummary
+                expandIcon={
+                  <ExpandMore
+                    className={`${theme === "dark" ? "text-white" : ""}`}
+                  />
+                }
+              >
+                <Typography sx={{ width: "33%", flexShrink: 0 }}>
+                  {project.name}
+                </Typography>
+                <Typography>{project.techStack}</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography>{project.description}</Typography>
+              </AccordionDetails>
+              <AccordionDetails>
                 <Link href={project?.githubUrl} target="_blank">
-                  <FontAwesomeIcon icon={faGithub} className="text-3xl" />
+                  <FontAwesomeIcon icon={faGithub} className="text-xl ml-3" />
                 </Link>
-                <Link href={project?.devLink} target="_blank">
-                  <FontAwesomeIcon icon={faLink} className="text-3xl" />
-                </Link>
-              </div>
-            </div>
-          );
-        })}
-        <button
-          onClick={prevSlide}
-          className="absolute left-0 transform -translate-y-1/2 top-1/2 text-3xl"
-        >
-          <FontAwesomeIcon icon={faAngleLeft} />
-        </button>
-        <button
-          onClick={nextSlide}
-          className="absolute right-0 transform -translate-y-1/2 top-1/2 text-3xl"
-        >
-          <FontAwesomeIcon icon={faAngleRight} />
-        </button>
-      </div>
-      <div className="flex flex-col lg:hidden space-y-10">
-        {projects?.map((project, index) => {
-          return (
-            <div className="text-center" key={index}>
-              <h1 className="text-2xl mb-4">{project?.name}</h1>
-              <p className="text-gray-400 mb-5">{project?.description}</p>
-              <Image
-                src={project?.imgUrl}
-                alt=""
-                width={800}
-                height={800}
-                className="w-full h-auto mb-4"
-              />
-              <div className="flex justify-center space-x-4">
-                <Link href={project?.githubUrl} target="_blank">
-                  <FontAwesomeIcon icon={faGithub} className="text-3xl" />
-                </Link>
-                <Link href={project?.devLink} target="_blank">
-                  <FontAwesomeIcon icon={faLink} className="text-3xl" />
-                </Link>
-              </div>
-            </div>
+                {project?.devLink && (
+                  <Link href={project?.devLink} target="_blank">
+                    <FontAwesomeIcon icon={faGlobe} className="text-xl ml-3" />
+                  </Link>
+                )}
+              </AccordionDetails>
+            </Accordion>
           );
         })}
       </div>

@@ -70,33 +70,40 @@ export const jobs: List = [
 
 export type Projects = {
   name: string;
-  description?: string;
-  imgUrl: string;
+  description: string;
+  techStack: string;
   githubUrl: string;
-  devLink: string;
+  devLink?: string;
 }[];
 
 export const projects: Projects = [
   {
-    name: "Xrossfit: A Fitness App",
-    imgUrl: "/xrossfit-img.png",
+    name: "Xrossfit",
+    description:"A MERN Stack app for users to keep a log of their daily exercises, buy training equipment and payment with additional functionalities such as user Authentication, payment gateway, admin portal and exercise recommendation.",
     githubUrl: "https://github.com/HETARTH7/XrossFit",
     devLink: "https://xross-fit.vercel.app/",
-    description:
+    techStack:
       "Javascript, ReactJS, NodeJS, ExpressJS, MongoDB, Mongoose, JWT, Socket.io",
   },
   {
+    name: "Twitter Sentiment Analysis",
+    description:"",
+    githubUrl: "https://github.com/HETARTH7/Twitter-Sentiment-Analysis",
+    techStack:
+      "Python3, Scikit-learn, NumPy, Matplotlib, Pandas",
+  },
+  {
     name: "Weather App",
-    imgUrl: "/weather-app-img.png",
+    description:"A front-end app that provides real-time weather information for any location.",
     githubUrl: "https://github.com/HETARTH7/Weather-App",
     devLink: "https://weather-app-hetarth7.vercel.app/",
-    description: "NextJS, Typescript",
+    techStack: "NextJS, Typescript",
   },
   {
     name: "Password Checker App",
-    imgUrl: "/pswd-checker-img.png",
     githubUrl: "https://github.com/HETARTH7/Password-Checker",
+    description:"This Flask application lets the user securely check if a password has been pwned or hacked without transmitting the password through theinternet. It uses Troy Hunt’s Have I Been Pwned API to get the passwords that have been leaked in the past using only the first five characters ofthe SHA1‑generated password.",
     devLink: "https://password-checker.onrender.com/",
-    description: "Python3, Flask, Have I Been Pwned API",
+    techStack: "Python3, Flask, Have I Been Pwned API",
   },
 ];
