@@ -160,13 +160,13 @@ export default function Contact() {
             required
           ></textarea>
         </div>
-        <LoadingButton
-          loading={loading}
+        <button
           type="submit"
-          className="w-full py-2 px-4 font-semibold rounded text-white bg-blue-500"
+          disabled={loading}
+          className="w-full py-2 px-4 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
         >
           Send
-        </LoadingButton>
+        </button>
       </form>
       <h2 className="text-4xl mt-10 max-[600px]:text-2xl">Find me on</h2>
       {devLinks?.map((devLink, index) => {
