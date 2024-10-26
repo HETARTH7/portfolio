@@ -96,7 +96,7 @@ export const projects: Projects = [
     name: "Weather App",
     description:"A front-end app that provides real-time weather information for any location.",
     githubUrl: "https://github.com/HETARTH7/Weather-App",
-    devLink: "https://weather-app-hetarth7.vercel.app/",
+    devLink: "https://weather-app-hetarth7s-projects.vercel.app/",
     techStack: "NextJS, Typescript",
   },
   {
