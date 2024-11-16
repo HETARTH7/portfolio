@@ -129,7 +129,7 @@ export default function Navbar() {
             ))}
           </Box>
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
+            <Tooltip title="Dark mode toggle btn">
               {currentTheme === "dark" ? (
                 <button onClick={() => setTheme("light")}>
                   <FontAwesomeIcon className="size-7" icon={faSun} />
