@@ -93,6 +93,13 @@ export const projects: Projects = [
       "Python3, Scikit-learn, NumPy, Matplotlib, Pandas",
   },
   {
+    name: "Pennywise",
+    description:"A Full Stack Expense Tracking App with a dashboard featuring visualizations, allowing users to manage their budget.",
+    githubUrl: "https://github.com/HETARTH7/Pennywise",
+    techStack:
+      "Java, AngularJS, SpringBoot, MySQL",
+  },
+  {
     name: "Weather App",
     description:"A front-end app that provides real-time weather information for any location.",
     githubUrl: "https://github.com/HETARTH7/Weather-App",
