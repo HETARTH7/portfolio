@@ -59,7 +59,6 @@ export default function Projects() {
       <h1 className="text-3xl my-10">Publication</h1>
       <div className="relative w-full max-w-4xl justify-center items-start">
         <div className="mb-4">
-          {/* Title and Link */}
           <div className="flex justify-between items-center">
             <Typography className="text-lg font-semibold">
               Ensemble transfer learning meets explainable AI: A deep learning
@@ -75,7 +74,6 @@ export default function Projects() {
               />
             </Link>
           </div>
-          {/* Publisher */}
           <Typography className="text-gray-600 mt-2">
             Ecological Informatics
           </Typography>
