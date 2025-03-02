@@ -81,7 +81,7 @@ export const projects: Projects = [
     name: "Xrossfit",
     description:"A MERN Stack app for users to keep a log of their daily exercises, buy training equipment and payment with additional functionalities such as user Authentication, payment gateway, admin portal and exercise recommendation.",
     githubUrl: "https://github.com/HETARTH7/XrossFit",
-    devLink: "https://xross-fit.vercel.app/",
+    devLink: "https://xrossfit.vercel.app/",
     techStack:
       "Javascript, ReactJS, NodeJS, ExpressJS, MongoDB, Mongoose, JWT, Socket.io",
   },
